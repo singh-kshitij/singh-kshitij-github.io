@@ -1,0 +1,105 @@
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
+
+export default function Portfolio() {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="flex flex-col items-center p-10 space-y-10"
+    >
+      <motion.h1
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="text-5xl font-bold text-blue-500"
+      >
+        Kshitij Singh
+      </motion.h1>
+      <div className="flex space-x-5 text-3xl">
+        <a href="mailto:kshitijhome@gmail.com" target="_blank" className="hover:text-red-500">
+          <SiGmail />
+        </a>
+        <a href="https://linkedin.com/in/K-Singh" target="_blank" className="hover:text-blue-700">
+          <FaLinkedin />
+        </a>
+        <a href="https://github.com/singh-kshitij" target="_blank" className="hover:text-gray-700">
+          <FaGithub />
+        </a>
+      </div>
+      
+      <motion.h2
+        initial={{ x: -50, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="text-3xl font-semibold"
+      >
+        Skills
+      </motion.h2>
+      <Card className="w-3/4">
+        <CardContent className="p-5 grid grid-cols-2 md:grid-cols-3 gap-4 text-lg">
+          <motion.span whileHover={{ scale: 1.1 }}>Python</motion.span>
+          <motion.span whileHover={{ scale: 1.1 }}>C/C++</motion.span>
+          <motion.span whileHover={{ scale: 1.1 }}>Java</motion.span>
+          <motion.span whileHover={{ scale: 1.1 }}>TensorFlow</motion.span>
+          <motion.span whileHover={{ scale: 1.1 }}>Deep Learning</motion.span>
+          <motion.span whileHover={{ scale: 1.1 }}>OpenCV</motion.span>
+        </CardContent>
+      </Card>
+      
+      <motion.h2
+        initial={{ x: 50, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="text-3xl font-semibold"
+      >
+        Projects
+      </motion.h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-3/4">
+        {[
+          { title: "Autism Prediction Using ML", desc: "Developed a pipeline using supervised learning and SMOTE for robust predictions." },
+          { title: "Potato Disease Classification", desc: "Built a CNN model achieving 99% accuracy, deployed via FastAPI." },
+          { title: "Modulation Scheme Classification", desc: "Implemented CNN & CLDNN models to classify signal modulation for spectrum monitoring." },
+          { title: "Fake News Detector", desc: "Used Logistic Regression and TF-IDF for reliable fake news classification." },
+        ].map((project, index) => (
+          <motion.div
+            key={index}
+            whileHover={{ scale: 1.05 }}
+            className="p-5 border rounded-lg shadow-lg"
+          >
+            <h3 className="text-xl font-bold">{project.title}</h3>
+            <p>{project.desc}</p>
+          </motion.div>
+        ))}
+      </div>
+      
+      <motion.h2
+        initial={{ y: 50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="text-3xl font-semibold"
+      >
+        Certifications
+      </motion.h2>
+      <Card className="w-3/4">
+        <CardContent className="p-5 grid grid-cols-1 md:grid-cols-2 gap-4 text-lg">
+          {[
+            "Machine Learning Specialization",
+            "TensorFlow Developer Specialization",
+            "Supervised ML: Regression & Classification",
+            "TensorFlow: CNNs",
+            "NLP in TensorFlow",
+            "Advanced Learning Algorithms",
+            "AWS Certified ML - Specialty",
+          ].map((cert, index) => (
+            <motion.span key={index} whileHover={{ scale: 1.1 }} className="hover:text-blue-500">{cert}</motion.span>
+          ))}
+        </CardContent>
+      </Card>
+    </motion.div>
+  );
+}
