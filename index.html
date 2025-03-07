@@ -4,100 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kshitij Singh - Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #121212;
-            color: white;
-            text-align: center;
-        }
-        .container {
-            padding: 50px;
-        }
-        .social-icons a {
-            margin: 0 10px;
-            font-size: 24px;
-            color: white;
-            transition: transform 0.3s;
-        }
-        .social-icons a:hover {
-            transform: scale(1.2);
-            color: #00acee;
-        }
-        .section {
-            margin: 50px auto;
-            width: 80%;
-            padding: 20px;
-            background: #1e1e1e;
-            border-radius: 10px;
-            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
-        }
-        h1, h2 {
-            color: #00acee;
-        }
-        .skills, .projects, .certifications {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .item {
-            background: #333;
-            padding: 15px;
-            margin: 10px;
-            border-radius: 5px;
-            transition: transform 0.3s;
-        }
-        .item:hover {
-            transform: scale(1.1);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
+    <header>
         <h1>Kshitij Singh</h1>
-        <div class="social-icons">
+        <div class="social-links">
             <a href="mailto:kshitijhome@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-            <a href="https://linkedin.com/in/K-Singh" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://linkedin.com/in/k--singh" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/singh-kshitij" target="_blank"><i class="fab fa-github"></i></a>
         </div>
-        
-        <div class="section">
-            <h2>Skills</h2>
-            <div class="skills">
-                <div class="item">Python</div>
-                <div class="item">C/C++</div>
-                <div class="item">Java</div>
-                <div class="item">TensorFlow</div>
-                <div class="item">Deep Learning</div>
-                <div class="item">OpenCV</div>
+    </header>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <span>Python</span>
+            <span>C/C++</span>
+            <span>Java</span>
+            <span>TensorFlow</span>
+            <span>Deep Learning</span>
+            <span>OpenCV</span>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-list">
+            <div class="project">
+                <h3>Autism Prediction Using ML</h3>
+                <p>Developed a pipeline to predict autism using supervised learning techniques, ensuring robust and reliable early detection.</p>
+            </div>
+            <div class="project">
+                <h3>Potato Disease Classification</h3>
+                <p>Built a CNN model achieving 99% accuracy, deployed via FastAPI, aiding farmers in disease detection and management.</p>
+            </div>
+            <div class="project">
+                <h3>Modulation Scheme Classification</h3>
+                <p>Implemented CNN & CLDNN models to classify signal modulation schemes for enhanced spectrum monitoring and 5G applications.</p>
+            </div>
+            <div class="project">
+                <h3>Fake News Detector</h3>
+                <p>Designed a system using Logistic Regression and TF-IDF to classify news articles as real or fake, combating misinformation effectively.</p>
             </div>
         </div>
-        
-        <div class="section">
-            <h2>Projects</h2>
-            <div class="projects">
-                <div class="item">Autism Prediction Using ML</div>
-                <div class="item">Potato Disease Classification</div>
-                <div class="item">Modulation Scheme Classification</div>
-                <div class="item">Fake News Detector</div>
-            </div>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="certifications-list">
+            <span>Machine Learning Specialization</span>
+            <span>TensorFlow Developer Specialization</span>
+            <span>Supervised ML: Regression & Classification</span>
+            <span>TensorFlow: CNNs</span>
+            <span>NLP in TensorFlow</span>
+            <span>Advanced Learning Algorithms</span>
+            <span>AWS Certified ML - Specialty</span>
         </div>
-        
-        <div class="section">
-            <h2>Certifications</h2>
-            <div class="certifications">
-                <div class="item">Machine Learning Specialization</div>
-                <div class="item">TensorFlow Developer Specialization</div>
-                <div class="item">Supervised ML: Regression & Classification</div>
-                <div class="item">TensorFlow: CNNs</div>
-                <div class="item">NLP in TensorFlow</div>
-                <div class="item">Advanced Learning Algorithms</div>
-                <div class="item">AWS Certified ML - Specialty</div>
-            </div>
-        </div>
-    </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Kshitij Singh. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
